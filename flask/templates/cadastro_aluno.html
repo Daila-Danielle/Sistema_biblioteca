@@ -1,0 +1,107 @@
+{% extends 'rodape.html'%}
+{% block conteudo %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aluno</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../static/style.css">
+
+
+  
+</head>
+<body >
+
+<div class="header-container">
+  <img id="img-logo" src="https://logodownload.org/wp-content/uploads/2019/08/senai-logo-1.png">
+  <div class="header-container2">
+  <h1>Cadastro de aluno</h1>
+</div>
+</div>
+
+<nav class="navbar navbar-expand-sm  ">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      
+      <li class="nav-item ">
+        <a class="nav-link active" href="cadastro_aluno">Cadastrar </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link estilo " href="consulta_aluno">Consultar </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link  estilo" href="excluir_aluno">Excluir</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link estilo  " href="atualizar_aluno">Atualizar</a>
+      </li>
+      
+    </ul>
+
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link  estilo" href="#"> {{login}}</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link  estilo" href="home">Home</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link  estilo" href="index">Sair</a>
+      </li>
+    </ul>
+
+
+  </div>
+</nav>
+    
+    <div class="conteiner-form">
+        
+        <form method="post" action="cadastro_aluno">
+
+            <div class="style-form-input full">
+                <input type="text" name="nome" required />
+                <label><i class="icon icon-user-1"></i>  Nome</label> 
+            </div>
+
+            
+            <div class="style-form-input">
+                <input type="text" name="cpf" required />
+                <label><i class="icon icon-mail-1"></i> CPF</label> 
+            </div>
+
+            
+            <div class="style-form-input right">
+                <input type="text" name="matricula" required />
+                <label><i class="icon icon-info-circled"></i> R.A (Matricula)</label> 
+            </div>
+
+              
+            
+            <div class="style-form-input full">
+                <input type="text" name="telefone" required />
+                <label><i class="icon icon-info-circled"></i> Telefone</label>
+            </div>
+
+            <center>{{erro}}</center>
+
+
+            <div class="style-form-input full">
+
+                <input type="hidden" name="acao" value="enviar">
+                <button class="btn-submit" onclick="myFunction()">Cadastrar</button>
+            
+            </div>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
+
+
+{% endblock %}
