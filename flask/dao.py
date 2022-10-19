@@ -12,7 +12,6 @@
 
 import mysql.connector  as banco 
 
-meubanco = banco.connect(host = "192.168.1.254", user = "estagiario", password = "estagio123", database = "treinamento_daila")
 #meubanco = banco.connect(host = "localhost", user = "root", password = "admin", database = "biblioteca")
 
 #aqui abaixo ficam as querys, pode ficar dentro das funções tbm... essas querys serão executadas no banco de dados pode ser insert, update, 
